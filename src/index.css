@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Quicksand:wght@300;400;500;600;700&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Whisper&display=swap');
+
 
 * {
     margin: 0;
+    padding: 0;
     font-family: "Quicksand";
-    color: #333;
+    color: rgb(1, 1, 1)
 }
 
 /* navbar css */
@@ -11,23 +15,31 @@
     padding: 20px;
     display: flex;
     align-items: center; 
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
     border-bottom: 1px solid #f2f2f2;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
 }
 
 .navbar h1 {
-    color: #f1356d;
+       color: #f1356d;
 }
 
 .navbar .links {
     margin-left: auto;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .navbar a {
     margin-left: 16px;
     text-decoration: none;
     padding: 6px;
+    float: left;
 }
 
 .navbar a:hover {
@@ -37,13 +49,21 @@
 /* hero css */
 
 .hero {
-    width: 50%; 
-    margin: auto;
+    width: 100%; 
+    margin: 0;
     font-weight: bold;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
+    font-size: 25px;
+    /* background-color: #cf4b72; */
+    border-radius: 55px;
+    position: sticky;
 }
 
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+}
 .content {
     max-width: 1200px;
     margin: 40px auto;
@@ -64,10 +84,12 @@ padding: 10px 16px;
 margin: 20px 0;
 border-bottom: 1px solid #fafafa;
 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+background-color: white;
 }
 
 .blog-preview:hover {
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 3px 5px rgba(170, 14, 14, 0.1);
+    background-color: #edd5db;
 }
 
 .blog-preview h2 {
@@ -79,6 +101,7 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 .blog-preview a {
     text-decoration: none;
 }
+
 
 /* Blog-details page */
 .blog-details h2 {
@@ -100,11 +123,13 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     cursor: pointer;
 }
 
+
 /* create new blog form */
 .create {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
+  
 }
 
 .create label {
@@ -134,4 +159,48 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+/* About page */
+.about {
+    background-color: #cf4b72;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+    align-items: center;
+   }
+
+  .about p {
+    padding: 5px;
+  } 
+
+/* login page */
+.login-container {
+    display: flex;
+    background-color: #edd5db;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+   height: 40vh;
+  border-radius: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    flex-direction: column;
+    padding: 20px;
+    }
+   
+.username {
+    margin: 10px;
+    padding-right: 10px;
+}
+
+.login {
+    background-color: #a92e53;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    margin-top: 20px;
 }
